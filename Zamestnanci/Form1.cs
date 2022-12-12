@@ -30,5 +30,20 @@ namespace Zamestnanci
                 listView1.Items.Add(listViewItem);
             }
         }
+
+        private void buttonVlozit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEditovat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMazat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

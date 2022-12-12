@@ -34,8 +34,9 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonVlozit = new System.Windows.Forms.Button();
+            this.buttonEditovat = new System.Windows.Forms.Button();
+            this.buttonMazat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -46,9 +47,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader5});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -83,19 +82,44 @@
             this.columnHeader5.Text = "BirthDate";
             this.columnHeader5.Width = 85;
             // 
-            // columnHeader7
+            // buttonVlozit
             // 
-            this.columnHeader7.Text = "Editovat";
+            this.buttonVlozit.Location = new System.Drawing.Point(363, 12);
+            this.buttonVlozit.Name = "buttonVlozit";
+            this.buttonVlozit.Size = new System.Drawing.Size(75, 23);
+            this.buttonVlozit.TabIndex = 1;
+            this.buttonVlozit.Text = "Vložit";
+            this.buttonVlozit.UseVisualStyleBackColor = true;
+            this.buttonVlozit.Click += new System.EventHandler(this.buttonVlozit_Click);
             // 
-            // columnHeader8
+            // buttonEditovat
             // 
-            this.columnHeader8.Text = "Mazat";
+            this.buttonEditovat.Location = new System.Drawing.Point(444, 12);
+            this.buttonEditovat.Name = "buttonEditovat";
+            this.buttonEditovat.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditovat.TabIndex = 2;
+            this.buttonEditovat.Text = "Editovat";
+            this.buttonEditovat.UseVisualStyleBackColor = true;
+            this.buttonEditovat.Click += new System.EventHandler(this.buttonEditovat_Click);
+            // 
+            // buttonMazat
+            // 
+            this.buttonMazat.Location = new System.Drawing.Point(525, 12);
+            this.buttonMazat.Name = "buttonMazat";
+            this.buttonMazat.Size = new System.Drawing.Size(75, 23);
+            this.buttonMazat.TabIndex = 3;
+            this.buttonMazat.Text = "Mazat";
+            this.buttonMazat.UseVisualStyleBackColor = true;
+            this.buttonMazat.Click += new System.EventHandler(this.buttonMazat_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonMazat);
+            this.Controls.Add(this.buttonEditovat);
+            this.Controls.Add(this.buttonVlozit);
             this.Controls.Add(this.listView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -111,8 +135,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Button buttonVlozit;
+        private System.Windows.Forms.Button buttonEditovat;
+        private System.Windows.Forms.Button buttonMazat;
     }
 }
 
