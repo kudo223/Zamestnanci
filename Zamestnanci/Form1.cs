@@ -43,7 +43,10 @@ namespace Zamestnanci
 
         private void buttonMazat_Click(object sender, EventArgs e)
         {
-
+            var selectedRow = listView1.SelectedItems[0];
+            var jmenoMazani = selectedRow.SubItems[0].Text;
+            sqlRepository.VymazatZamestnance(jmenoMazani);
+            listView1.SelectedItems[0].Remove();
         }
     }
 }

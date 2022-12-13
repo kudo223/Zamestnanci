@@ -42,6 +42,21 @@ namespace Zamestnanci
             }
             return vypis;
         }
+        public void VymazatZamestnance(string jmenoMazani)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "DELETE FROM Zamestnanci WHERE FirstName=@FirstName";
+                    sqlCommand.Parameters.AddWithValue("FirstName", jmenoMazani);
+                    sqlCommand.ExecuteNonQuery();
+                }
+                sqlConnection.Close();
+            }
+        }
     }
     
 }
