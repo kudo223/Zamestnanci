@@ -33,7 +33,9 @@ namespace Zamestnanci
 
         private void buttonVlozit_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormVlozit formVlozit = new FormVlozit();
+            formVlozit.Show();
         }
 
         private void buttonEditovat_Click(object sender, EventArgs e)
@@ -47,6 +49,11 @@ namespace Zamestnanci
             var jmenoMazani = selectedRow.SubItems[0].Text;
             sqlRepository.VymazatZamestnance(jmenoMazani);
             listView1.SelectedItems[0].Remove();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

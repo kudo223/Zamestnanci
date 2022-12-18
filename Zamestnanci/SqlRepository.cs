@@ -57,6 +57,27 @@ namespace Zamestnanci
                 sqlConnection.Close();
             }
         }
+        public void VlozitZamestnance(int id,string firstname, string lastname, string phone, string email, DateTime birthday)
+        {
+
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand())
+                    {
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandText = $"INSERT INTO Zamestnanci (Id, Firstname, Lastname, Phone, Email, Birthday) VALUES (@id,@firstname,@lastname,@phone,@email, @birthday)";
+                        sqlCommand.Parameters.AddWithValue("@id", id);
+                        sqlCommand.Parameters.AddWithValue("@firstname", firstname);
+                        sqlCommand.Parameters.AddWithValue("@lastname", lastname);
+                        sqlCommand.Parameters.AddWithValue("@phone", phone);
+                        sqlCommand.Parameters.AddWithValue("@email", email);
+                        sqlCommand.Parameters.AddWithValue("@birthday", birthday);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    sqlConnection.Close();
+                }
+            }
     }
     
 }
