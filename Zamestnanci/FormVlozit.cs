@@ -20,7 +20,7 @@ namespace Zamestnanci
 
         private void buttonVlozitData_Click(object sender, EventArgs e)
         {
-            sqlRepository.VlozitZamestnance(Convert.ToInt32(numericUpDown1.Value), textBoxFirstName.Text, textBoxLastName.Text, textBoxPhone.Text, textBoxEmail.Text, dateTimePicker1.Value);
+            sqlRepository.VlozitZamestnance(textBoxFirstName.Text, textBoxLastName.Text, textBoxPhone.Text, textBoxEmail.Text, dateTimePicker1.Value);
             this.Close();
             Form1 form1 = new Form1();
             form1.Show();
