@@ -57,7 +57,7 @@ namespace Zamestnanci
                 sqlConnection.Close();
             }
         }
-        public void VlozitZamestnance(string firstname, string lastname, string phone, string email, DateTime birthday)
+        public void VlozitZamestnance(string firstname, string lastname, string phone, string email, DateTime birthdate)
         {
 
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
@@ -66,12 +66,12 @@ namespace Zamestnanci
                     using (SqlCommand sqlCommand = new SqlCommand())
                     {
                         sqlCommand.Connection = sqlConnection;
-                        sqlCommand.CommandText = $"INSERT INTO Zamestnanci (Firstname, Lastname, Phone, Email, BirthDate) VALUES (@firstname,@lastname,@phone,@email, @birthday)";
+                        sqlCommand.CommandText = $"INSERT INTO Zamestnanci (Firstname, Lastname, Phone, Email, BirthDate) VALUES (@firstname,@lastname,@phone,@email, @birthdate)";
                         sqlCommand.Parameters.AddWithValue("@firstname", firstname);
                         sqlCommand.Parameters.AddWithValue("@lastname", lastname);
                         sqlCommand.Parameters.AddWithValue("@phone", phone);
                         sqlCommand.Parameters.AddWithValue("@email", email);
-                        sqlCommand.Parameters.AddWithValue("@birthday", birthday);
+                        sqlCommand.Parameters.AddWithValue("@birthdate", birthdate);
                         sqlCommand.ExecuteNonQuery();
                     }
                     sqlConnection.Close();
