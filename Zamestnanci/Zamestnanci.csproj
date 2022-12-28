@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditovat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditovat.Designer.cs">
+      <DependentUpon>FormEditovat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVlozit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Vypis.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditovat.resx">
+      <DependentUpon>FormEditovat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVlozit.resx">
       <DependentUpon>FormVlozit.cs</DependentUpon>

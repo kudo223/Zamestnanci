@@ -38,8 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonVlozitData = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxFirstName
@@ -123,19 +121,11 @@
             this.buttonVlozitData.UseVisualStyleBackColor = true;
             this.buttonVlozitData.Click += new System.EventHandler(this.buttonVlozitData_Click);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(64, 22);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 10;
-            // 
             // FormVlozit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.buttonVlozitData);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -148,7 +138,6 @@
             this.Controls.Add(this.textBoxFirstName);
             this.Name = "FormVlozit";
             this.Text = "FormVlozit";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +155,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonVlozitData;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

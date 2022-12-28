@@ -76,7 +76,29 @@ namespace Zamestnanci
                     }
                     sqlConnection.Close();
                 }
+        }
+        public void EditovatZamestnance(string firstname, string lastname, string phone, string email, DateTime birthdate)
+        {
+
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "UPDATE Zamestnanci SET Firstname=@firstname, Lastname=@lastname, Phone=@phone, Email=@email, Birthdate=@birthdate WHERE  Firstname=@firstname ";
+                    sqlCommand.Parameters.AddWithValue("@firstname", firstname);
+                    sqlCommand.Parameters.AddWithValue("@lastname", lastname);
+                    sqlCommand.Parameters.AddWithValue("@phone", phone);
+                    sqlCommand.Parameters.AddWithValue("@email", email);
+                    sqlCommand.Parameters.AddWithValue("@birthdate", birthdate);
+                    sqlCommand.ExecuteNonQuery();
+                }
+                sqlConnection.Close();
             }
+        }
     }
     
+
+
 }

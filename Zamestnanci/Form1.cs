@@ -41,6 +41,18 @@ namespace Zamestnanci
         private void buttonEditovat_Click(object sender, EventArgs e)
         {
 
+            
+                this.Hide();
+                FormEditovat formEdit = new FormEditovat();
+                formEdit.Show();
+                var selectedRow = listView1.SelectedItems[0];
+                var firstname = selectedRow.SubItems[0].Text;
+                var lastname = selectedRow.SubItems[1].Text;
+                var phone = selectedRow.SubItems[2].Text;
+                var email = selectedRow.SubItems[3].Text;
+                var birthday = selectedRow.SubItems[4].Text;
+                formEdit.Data(firstname, lastname, phone, email, Convert.ToDateTime(birthday));
+            
         }
 
         private void buttonMazat_Click(object sender, EventArgs e)
